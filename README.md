@@ -1,3 +1,28 @@
+**Note:**
+
+
+This is a fork of SOIL2 that has a CMakeLists.txt for Linux so it plays nice with my other CMake projects.
+
+** CMake Build Instructions (Pretty Standard): **
+
+```
+cd <SOIL2 directory>
+cmake .
+make
+```
+
+The libraries are in lib and the tests in bin.
+
+To use inside a CMake Project add the following to your CMakeLists.txt:
+
+```
+add_subdirectory(<path to this directory>)
+include_directories(${SOIL2_INCLUDE_DIRECTORIES})
+link_directories(${SOIL_LIBRARY_DIRECTORIES})
+target_link_libraries(<your target> ${SOIL2_LIBRARIES})
+```
+
+
 Simple OpenGL Image Library 2 ![SOIL2](https://web.ensoft.dev/soil2/soil2-logo.svg)
 =============================
 
